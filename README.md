@@ -9,7 +9,7 @@
       5. Verify that the default selected option in Models dropdown is All Models
       
       6. Verify that Models dropdown options are [All Models, Aventador, Huracan, Urus,
-   400GT, Centenario, Countach, Diablo, Espada, Gallardo, Murcielago
+    400GT, Centenario, Countach, Diablo, Espada, Gallardo, Murcielago
       
       7. In Models dropdown, choose Gallardo
       
@@ -17,7 +17,7 @@
       
       9. In the results page, verify that there are 15 search results, excluding the first sponsored
       result: To isolate the 15 results, excluding the first sponsored one, you can use a custom xpath which excludes the first result. For example:
-    ////a[@data-cg-ft='car-blade-link'][not(contains(@href, 'FEATURED'))] (find all <a> elements that have a common data-cg-ft attribute 'car-blade-link' (matche 16 results) and whose href attribute does not contain text 'FEATURED'
+    ////a[@data-cg-ft='car-blade-link'][not(contains(@href, 'FEATURED'))] (find all <a> elements that have a common data-cg-ft attribute 'car-blade-link' (matche 16       results) and whose href attribute does not contain text 'FEATURED'
         List<WebElement> searchResults = driver.findElements(By.xpath("//a[@data-cg-ft='car-blade-link'][not(contains(@href, 'FEATURED'))]"));
        
       10. Verify that all 15 result's title text contains "Lamborghini Gallardo
