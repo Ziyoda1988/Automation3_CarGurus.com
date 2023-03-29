@@ -29,24 +29,24 @@ public class Automation3 {
 
 //  3. Verify that the default selected option in Makes dropdown is All Makes (Use Assert
 //methods for all verifications
-//
+
         String actualMake = driver.findElement(By.cssSelector("#carPickerUsed_makerSelect > option")).getText();
         String exeptedMake = "All Makes";
         Assert.assertEquals(actualMake, exeptedMake);
 
-////  4. In Makes dropdown, choose Lamborghini
+//  4. In Makes dropdown, choose Lamborghini
         driver.findElement(By.id("carPickerUsed_makerSelect")).click();
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//*[@id=\"carPickerUsed_makerSelect\"]/optgroup[2]/option[52]")).click();
+        driver.findElement(By.xpath("//*[@id=\"carPickerUsed_makerSelect\"]/optgroup[2]/option[53]")).click();
 
-////  5. Verify that the default selected option in Models dropdown is All Models
+//  5. Verify that the default selected option in Models dropdown is All Models
 
         String actualModel = driver.findElement(By.cssSelector("#carPickerUsed_modelSelect > option")).getText();
         String exeptedModel = "All Models";
         Assert.assertEquals(actualModel, exeptedModel);
 
-////  6. Verify that Models dropdown options are [All Models, Aventador, Huracan, Urus,
-////400GT, Centenario, Countach, Diablo, Espada, Gallardo, Murcielago
+//  6. Verify that Models dropdown options are [All Models, Aventador, Huracan, Urus,
+//400GT, Centenario, Countach, Diablo, Espada, Gallardo, Murcielago
 
         Select select = new Select(driver.findElement(By.id("carPickerUsed_modelSelect")));
         List<WebElement> options = select.getOptions();
